@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXAMEN FINAL</title>
+</head>
+<body>
+    
+</body>
+</html>
+<input type="number" id="input1">
+<input type="number">
+<input type="number">
+<button onclick="sumar()">Botón 1</button>
+<button onclick="borrar()">Botón 2</button>
+<div id="resultado"></div>
+
+<script>
+function sumar() {
+  var input1 = parseInt(document.getElementById("input1").value);
+  var input2 = parseInt(document.getElementsByTagName("input")[1].value);
+  var input3 = parseInt(document.getElementsByTagName("input")[2].value);
+  
+  if (input1 < input3) {
+    var resultado = input1 + input2 + input3;
+    document.getElementById("resultado").innerHTML = "Operación realizada: " + input1 + " + " + input2 + " + " + input3 + " = " + resultado;
+  } else {
+    document.getElementById("resultado").innerHTML = "El valor del primer input no es menor que el tercer input";
+  }
+}
+
+function borrar() {
+  document.getElementById("input1").value = "";
+  document.getElementsByTagName("input")[1].value = "";
+  document.getElementsByTagName("input")[2].value = "";
+  document.getElementById("resultado").innerHTML = "";
+}
+</script>
+<script>
+    function sumar() {
+      var input1 = parseInt(document.getElementById("input1").value);
+      var input2 = parseInt(document.getElementsByTagName("input")[2].value);
+      var input3 = parseInt(document.getElementsByTagName("input")[2].value);
+      
+      if (input1 < input3) {
+        var resultado = input1 + input2 + input3;
+        document.getElementById("resultado").innerHTML = "Operación realizada: " + input1 + " + " + input2 + " + " + input3 + " = " + resultado;
+      } else {
+        document.getElementById("resultado").innerHTML = "El valor del primer input no es menor que el tercer input";
+      }
+    }
+    
